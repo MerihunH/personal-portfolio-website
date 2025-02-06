@@ -119,3 +119,10 @@ body {
 .tab-links.active-link::after {
   width: 50%;
 }
+.merihun {
+font-size: 60px;
+  font-weight: 600;
+}
+.merihun span{
+  background: linear-gradient(to bottom, #00ffff 30%, #000099 100%);
+}
