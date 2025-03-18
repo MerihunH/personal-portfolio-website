@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>personal-portfolio-website</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://kit.fontawesome.com/3dcd71a794.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- header section  -->
-    <div id="header">
+    <div id="header" >
       <div class="container">
         <!-- navigation bar  -->
         <nav class="nav">
-          <h1 class="merihun"><span>M</span>erihun</h1>
+          <h1 class="hadenav"><span>M</span>erihun</h1>
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Portfolio</a></li>
             <li><a href="#">Contact</a></li>
+          <i class="fa-solid fa-xmark"></i>
           </ul>
+          <i class="fa-solid fa-bars"></i>
         </nav>
         <div class="header-text">
           <h1><span>S</span>oftware <span>E</span>ngineer</h1>
@@ -47,18 +50,129 @@
               nostrum nisi dolorum dolorem ex sunt enim?
             </p>
             <div class="tab-titles">
-              <p class="tab-links active-link">skills</p>
-              <p class="tab-links">Experience</p>
-              <p class="tab-links">Education</p>
-              <div class="tab-contents">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                skills
+              </p>
+
+              <p class="tab-links" onclick="opentab('Education')">Education</p>
+              <p class="tab-links" onclick="opentab('Experience')">
+                Experience
+              </p>
+            </div>
+
+            <!-- Skill -->
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Web Development</span><br />Proficient in full-stack
+                  development using HTML, CSS, JavaScript, React.js for
+                  front-end, and Node.js,MongoDB, PHP for back-end.
+                  <p>
+                    Check out my YouTube video in the Experience tab where I’m
+                    coding online.
+                  </p>
+                </li>
+                <li>
+                  <span>Database Management</span><br />Skilled in SQL, database
+                  design, and management systems.
+                </li>
+                <li>
+                  <span>Networking</span><br />Experienced in configuring and
+                  managing networks, understanding protocols, and ensuring
+                  network security.
+                </li>
+                <li>
+                  <span>3D Animation</span><br />3D animation produces motion
+                  graphics in three dimensions using software such as Blender.
+                </li>
+              </ul>
+</div>
+
+              <!-- Education -->
+              <div class="tab-contents" id="Education">
                 <ul>
                   <li>
-                    <span>web Development</span><br />Front and back-End Development
-
+                    <span></span><br />
+                    Bachelor's Degree in Information Technology (IT)
+                    <data value="">01/24/2021</data>
                   </li>
-                  <li><span>3d animation</span><br /></li>
-                  <li><span></span><br /></li>
-                  <li><span></span><br /></li>
+                  <li>
+                    <span></span><br />Full-Stack Web Development (MERN)
+                    Certificate on <data value="">02/15/2024</data>
+                  </li>
+                </ul>
+              </div>
+
+
+              <!-- Experience -->
+              <div class="tab-contents" id="Experience">
+                <ul>
+                  <li>
+                   <h2> <span>YouTube Channels</span></h2><br />
+                    <div class="youtube-channel">
+                      <h3>My YouTube Channel</h3><br/>
+                      <p>
+                        My YouTube channel is dedicated to helping people back
+                        home learn new technologies such as React.js and
+                        Node.js. I create tutorials from scratch in Amharic,
+                        making complex concepts accessible to all. Through my
+                        channel, I demonstrate my commitment to sharing
+                        knowledge and my dedication to coding.
+                      </p>
+                      <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/lwxyGyyjhVw"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      ></iframe>
+                      <p>
+                        For more tutorials, check out my channel:
+                        <a
+                          href="https://www.youtube.com/watch?list=PLjfvoYA1s2t9DbAjaXiT8tQ6zg7G96AMM"
+                          target="_blank"
+                          >YouTube Channel</a
+                        >
+                      </p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <h3>3D animation</h3><br />3D animation produces motion
+                    graphics in three dimensions using software such as Blender.
+                  </li>
+
+                  <div class="animation-channel">
+                    <h3>My Animation Channel</h3><br/>
+                    <p>
+                      I created this animation channel using Blender animation
+                      software, where all videos are developed from scratch. My
+                      interest in technology drives me to create Blender
+                      animation videos through self-learning. This reflects my
+                      commitment to personal growth and my willingness to
+                      challenge myself in the creative field.
+                    </p>
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/qo2LpOxF37U"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                    <p>
+                      Watch the video here:
+                      <a href="https://youtu.be/qo2LpOxF37U" target="_blank"
+                        >Watch Animation Video</a
+                      >
+                    </p>
+                    <p>Internships or Projects</p>
+                  </div>
                 </ul>
               </div>
             </div>
@@ -66,5 +180,131 @@
         </div>
       </div>
     </div>
+
+    <!-- services -->
+    <div id="servicse">
+<div class="container">
+  <h2 class="sub-title">My Servicse</h2>
+  <div class="services-list">
+<div>
+  <i class="fa-solid fa-code"></i>
+  <h2>web development</h2>
+  <p>As a motivated junior-level Full Stack Web Developer, I specialize in creating dynamic web applications. I utilize HTML, CSS, and JavaScript, including jQuery, to build responsive interfaces, using frameworks like React and Bootstrap. On the back end, I develop server-side applications with Node.js, Express, and PHP, managing databases with MySQL for seamless data integration..</p>
+  <a rel="stylesheet" href="#">Learn more</a>
+</div>
+<div>
+  <i class="fa-solid fa-database"></i>
+  <h2>Database Management</h2>
+  <p>
+I specialize in managing databases using systems such as MySQL. My focus is on ensuring data integrity, security, and efficient data retrieval. I am proficient in creating, inserting, updating, and deleting records, as well as querying databases to support dynamic web applications. This facilitates smooth data integration and enhances user experiences. My expertise allows me to optimize database performance and ensure reliable access to information..</p>
+  <a rel="stylesheet" href="#">Learn more</a>
+</div>
+
+<div>
+  <i class="fa-solid fa-cubes"></i>
+  <h2>3D Animation</h2>
+  <p>
+I have a passion for exploring new knowledge and self-learning in the field of 3D animation. My drive to create stunning 3D videos reflects my commitment to mastering the latest technologies. I embrace new tools and techniques to enhance my skills, ensuring that I can deliver high-quality animations for diverse projects. My adaptability and eagerness to learn enable me to thrive in dynamic environments and contribute effectively to any team.</p>
+  <a rel="stylesheet" href="#">Learn more</a>
+</div>
+
+</div>
+    </div>
+
+   <!-- portfolio -->
+    <div id="portfolio">
+<div class="container">
+  <h2 class="sub-title">My Work</h2>
+  <div class="work-list">
+    <div class="work"><img src="./image/Netflix_clone.png" alt="">
+    <div class="layer">
+<h3>Netflix Clone</h3>
+<p>I built a Netflix clone with React.js and the TMDB API, featuring a dark theme and easy navigation. The site may show safety warnings, but they often aren’t serious. Click "Details" for more info and proceed with caution.</p>
+<a href=" https://merihunh.github.io/Netflix-Clone-2024/"><i class="fa-solid fa-up-right-from-square"></i></a>
+
+    </div>
+    </div>
+    <div class="work"><img src="./image/amazon_clone.png" alt="">
+      
+  <h2>Coming Soon</h2>
+       <div class="layer">
+        
+    <h3>Amazon clone</h3>
+<p>Stay tuned for my Amazon clone project, built with React.js! Experience a seamless shopping journey with intuitive navigation and secure checkout. Exciting features are on the way!</p>
+<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+</div>
+</div>
+    <div class="work"><img src="./image/Garage_Management_System.png" alt="">
+      <h2>Coming Soon</h2>
+    <div class="layer">
+    <h3>Garage Management System</h3>
+<p>Stay tuned for my Garage Management System! This web app streamlines operations with an intuitive dashboard, vehicle tracking, appointment scheduling, and inventory management, enhancing the overall user experience..</p>
+<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+</div>
+</div>
+  </div>
+  <div><span  class="btn">see more</span>
+  
+  </div>
+  </div>
+  </div>
+  <!-- contact -->
+
+  <div id="contact">
+    <div class="container">
+<div class="raw">
+  <div class="contact-left">
+    <h2 class="sub-title">Contact me
+    </h2>
+    <p><i class="fa-solid fa-envelope"></i> merihunhankara5@gmail.com</p>
+    <p> <i class="fa-solid fa-phone"></i> (206) 302-8554</p>
+  
+  <div class="social-icons">
+    <a href=""><i class="fa-brands fa-facebook"></i></a>
+    <a href="HTTPS://www.youtube.com/@MerihunHankara"><i class="fa-brands fa-youtube"></i></a>
+    <a href=""><i class="fa-brands fa-tiktok"></i></a>
+    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+  </div>
+  <a href="./image/cv.pdf" download class="btn btn2">Download CV</a>
+</div>
+  <div class="contact-right">
+    <form >
+     <input type="text" name="Name" placeholder="Your Name" required>
+     <input type="email" name="Email" placeholder="Your Email" required>
+     <textarea name="message"  rows="5" placeholder="Your Message"></textarea>
+     <button type="submit" class="btn btn2">submit</button>
+    </form>
+
+  </div>
+  
+</div>
+
+    </div>
+    <div class="copyright"><p> <i class="fa-solid fa-copyright"></i>2025 Merihun Harka. All rights reserved.</p></div>
+  </div>
+<script>
+var tablinks = document.getElementsByClassName("tab-links");
+
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname)
+{
+
+  for(tablink of tablinks)
+{
+  tablink.classList.remove("active-link")
+}
+
+ for(tabcontent of tabcontents)
+{
+  tabcontent.classList.remove("active-tab")
+}
+event.currentTarget.classList.add("active-link")
+  document.getElementById(tabname).classList.add("active-tab");
+
+}
+
+</script>
+
   </body>
 </html>
