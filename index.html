@@ -4,25 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>personal-portfolio-website</title>
+    <link rel="icon" type="image/x-icon" href="./image/favicon.ico.JPG">
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="https://kit.fontawesome.com/3dcd71a794.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <!-- header section  -->
+    <!--------------------- header section ---------------->
     <div id="header" >
       <div class="container">
-        <!-- navigation bar  -->
+        <!---------------- navigation bar ------------------>
         <nav class="nav">
           <h1 class="hadenav"><span>M</span>erihun</h1>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-          <i class="fa-solid fa-xmark"></i>
+          <div class="time-container" id="timeDisplay"></div>
+          <ul id="menu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#servicse">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-xmark" id="closemenu" onclick="closemenu()" ></i>
           </ul>
-          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-bars" id="openmenu"  onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
           <h1><span>S</span>oftware <span>E</span>ngineer</h1>
@@ -33,85 +34,108 @@
         </div>
       </div>
     </div>
-    <!-- About Me -->
+
+    <!------------------- About Me -------------------->
     <div id="about">
       <div class="container">
         <div class="row">
           <div class="about-col-1">
             <img class="img" src="./image/bg2.JPG" alt="" />
           </div>
-
           <div class="about-col-2">
             <h2 class="sub-title">About Me</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Provident accusantium esse exercitationem pariatur repellat ut,
-              molestias vel aliquam odit quae! Vero, exercitationem error
-              nostrum nisi dolorum dolorem ex sunt enim?
+            <p class="paragraph">    
+I am a motivated Junior Full Stack Web Developer with a strong work ethic and a keen focus on web application development. I thrive in innovative environments and am eager to tackle challenges. My passion for continuous learning drives me to develop high-quality solutions. Currently, I am working on various projects that showcase my skills and contributions. Explore my work to see how I can add value to your team.
             </p>
             <div class="tab-titles">
               <p class="tab-links active-link" onclick="opentab('skills')">
-                skills
+                Skills
               </p>
-
+             <p class="tab-links" onclick="opentab('Competencies')">
+                 Competencies
+              </p>
               <p class="tab-links" onclick="opentab('Education')">Education</p>
               <p class="tab-links" onclick="opentab('Experience')">
                 Experience
               </p>
             </div>
 
-            <!-- Skill -->
+            <!--------------------- Skill ------------------>
             <div class="tab-contents active-tab" id="skills">
               <ul>
                 <li>
-                  <span>Web Development</span><br />Proficient in full-stack
-                  development using HTML, CSS, JavaScript, React.js for
-                  front-end, and Node.js,MongoDB, PHP for back-end.
-                  <p>
-                    Check out my YouTube video in the Experience tab where I’m
-                    coding online.
+                  <span>Web Development</span><br /><p class="paragraph">Proficient in full-stack development, utilizing HTML, CSS, JavaScript, and React.js for front-end development, along with Node.js, PHP, and MySQL for back-end development. I am currently working on various projects that showcase these skills. Check out my YouTube video in the Experience tab where I’m coding online.</p>
+                </li>
+                <li>
+                  <span>Database Management</span><br />
+                  <p class="paragraph">Skilled in MySQL, database design, and management systems.
                   </p>
                 </li>
                 <li>
-                  <span>Database Management</span><br />Skilled in SQL, database
-                  design, and management systems.
-                </li>
-                <li>
-                  <span>Networking</span><br />Experienced in configuring and
+                  <span>Networking</span><br />
+                  <p class="paragraph">Experienced in configuring and
                   managing networks, understanding protocols, and ensuring
                   network security.
+                </p>
                 </li>
                 <li>
-                  <span>3D Animation</span><br />3D animation produces motion
+                  <span>3D Animation</span><br />
+                  <p class="paragraph" >3D animation produces motion
                   graphics in three dimensions using software such as Blender.
+                </p>
                 </li>
               </ul>
-</div>
+              </div>
 
-              <!-- Education -->
+       <!----------------- Competencies ------------------->
+<div class="tab-contents" id="Competencies">
+                <ul>
+                 <li><span> <b> Creative Problem Solving:</b> </span>
+                 <p class="paragraph">Innovative approach to tackling challenges.</p>
+                  </li>
+
+                  <li><span> <b> Strong Communication Skills:</b></span>
+                  <p class="paragraph"> Clear and effective communication with peers and stakeholders.</p>
+                  </li>
+
+                  <li><span><b> Web Application Development:</b></span>
+                  <p class="paragraph"> Experienced in building and deploying web applications.</p>
+                  </li>
+
+                 <li> <span><b> Commitment to Continuous Learning:</b> </span>
+                  <p class="paragraph">Dedicated to personal and professional growth.</p>
+                  </li>
+
+                   <li>
+                 <span> <b> Focus and Patience:</b></span>
+                  <p class="paragraph">Maintains attention to detail and composure under pressure.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <!--------------------- Education -------------------->
               <div class="tab-contents" id="Education">
                 <ul>
                   <li>
-                    <span></span><br />
-                    Bachelor's Degree in Information Technology (IT)
-                    <data value="">01/24/2021</data>
+                   <p class="paragraph"> Bachelor's Degree in Information Technology (IT) | Arbaminch University | Ethiopian 
+                    <data value="">01/24/2021</data>.</p>
                   </li>
                   <li>
-                    <span></span><br />Full-Stack Web Development (MERN)
-                    Certificate on <data value="">02/15/2024</data>
+                    <span></span><br />
+                    <p class="paragraph">Full-Stack Web Development (MERN)
+                    Certificate on <data value="">02/15/2024</data>.</p>
                   </li>
                 </ul>
               </div>
 
 
-              <!-- Experience -->
-              <div class="tab-contents" id="Experience">
-                <ul>
-                  <li>
-                   <h2> <span>YouTube Channels</span></h2><br />
-                    <div class="youtube-channel">
-                      <h3>My YouTube Channel</h3><br/>
-                      <p>
+              <!------------------- Experience -------------------->
+              <div class="tab-contents tab-contents-Experience"  id="Experience">
+                
+                   <h2 style="text-align: center;">YouTube Channels</h2><br />
+                    
+                      <span>React.js & Node.js Lessons</span><br><br>
+                      <p class="paragraph">
                         My YouTube channel is dedicated to helping people back
                         home learn new technologies such as React.js and
                         Node.js. I create tutorials from scratch in Amharic,
@@ -120,8 +144,9 @@
                         knowledge and my dedication to coding.
                       </p>
                       <iframe
-                        width="560"
-                        height="315"
+                       margin="auto" 
+                        width="475"
+                        height="300"
                         src="https://www.youtube.com/embed/lwxyGyyjhVw"
                         title="YouTube video player"
                         frameborder="0"
@@ -130,24 +155,18 @@
                         allowfullscreen
                       ></iframe>
                       <p>
-                        For more tutorials, check out my channel:
+                        For more video, 
                         <a
-                          href="https://www.youtube.com/watch?list=PLjfvoYA1s2t9DbAjaXiT8tQ6zg7G96AMM"
+                          href="https://www.youtube.com/@MerihunHankara"
                           target="_blank"
-                          >YouTube Channel</a
+                          >Click here</a
                         >
                       </p>
-                    </div>
-                  </li>
-
-                  <li>
-                    <h3>3D animation</h3><br />3D animation produces motion
-                    graphics in three dimensions using software such as Blender.
-                  </li>
-
-                  <div class="animation-channel">
-                    <h3>My Animation Channel</h3><br/>
-                    <p>
+                  <br>
+                  <div>
+                    <span>3D Animation Channel</span><br><br>
+                    
+                    <p class="paragraph">
                       I created this animation channel using Blender animation
                       software, where all videos are developed from scratch. My
                       interest in technology drives me to create Blender
@@ -155,25 +174,20 @@
                       commitment to personal growth and my willingness to
                       challenge myself in the creative field.
                     </p>
-                    <iframe
-                      width="560"
-                      height="315"
-                      src="https://www.youtube.com/embed/qo2LpOxF37U"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; 
-            encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
+                    <iframe width="475" height="300" src="https://www.youtube.com/embed/KLg6Ff58iTQ?si=VWD_T1m0Nhvhcc46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <p>
-                      Watch the video here:
-                      <a href="https://youtu.be/qo2LpOxF37U" target="_blank"
-                        >Watch Animation Video</a
+                      For more video,
+                      <a href="https://www.youtube.com/@yemaleda-tsehay" target="_blank"
+                        >Click here</a
                       >
-                    </p>
-                    <p>Internships or Projects</p>
+                    </p><br>
+
+                    <ul class="Experience" ><li>Team leader for my bachelor's degree final project.</li>
+                          <li>  IT educator at high school and college levels.</li>
+                           <li> Experienced in creating 2D and 3D animations.</li>
+                            <li>Certified personal gym trainer.</li>
+                           <li> Over a year of experience as a dining room server.</li></ul>
                   </div>
-                </ul>
               </div>
             </div>
           </div>
@@ -181,7 +195,7 @@
       </div>
     </div>
 
-    <!-- services -->
+    <!----------------- services --------------------->
     <div id="servicse">
 <div class="container">
   <h2 class="sub-title">My Servicse</h2>
@@ -189,29 +203,24 @@
 <div>
   <i class="fa-solid fa-code"></i>
   <h2>web development</h2>
-  <p>As a motivated junior-level Full Stack Web Developer, I specialize in creating dynamic web applications. I utilize HTML, CSS, and JavaScript, including jQuery, to build responsive interfaces, using frameworks like React and Bootstrap. On the back end, I develop server-side applications with Node.js, Express, and PHP, managing databases with MySQL for seamless data integration..</p>
-  <a rel="stylesheet" href="#">Learn more</a>
+  <p>As a motivated junior-level Full Stack Web Developer, I specialize in creating dynamic web applications. I utilize HTML, CSS, and JavaScript, including jQuery, to build responsive interfaces, using frameworks like React and Bootstrap. On the back end, I develop server-side applications with Node.js, Express, and PHP, managing databases with MySQL for seamless data integration.</p>
 </div>
 <div>
   <i class="fa-solid fa-database"></i>
   <h2>Database Management</h2>
   <p>
-I specialize in managing databases using systems such as MySQL. My focus is on ensuring data integrity, security, and efficient data retrieval. I am proficient in creating, inserting, updating, and deleting records, as well as querying databases to support dynamic web applications. This facilitates smooth data integration and enhances user experiences. My expertise allows me to optimize database performance and ensure reliable access to information..</p>
-  <a rel="stylesheet" href="#">Learn more</a>
+I specialize in managing databases using systems such as MySQL. My focus is on ensuring data integrity, security, and efficient data retrieval. I am proficient in creating, inserting, updating, and deleting records, as well as querying databases to support dynamic web applications. This facilitates smooth data integration and enhances user experiences. My expertise allows me to optimize database performance and ensure reliable access to information.</p>
 </div>
-
 <div>
   <i class="fa-solid fa-cubes"></i>
   <h2>3D Animation</h2>
   <p>
 I have a passion for exploring new knowledge and self-learning in the field of 3D animation. My drive to create stunning 3D videos reflects my commitment to mastering the latest technologies. I embrace new tools and techniques to enhance my skills, ensuring that I can deliver high-quality animations for diverse projects. My adaptability and eagerness to learn enable me to thrive in dynamic environments and contribute effectively to any team.</p>
-  <a rel="stylesheet" href="#">Learn more</a>
 </div>
-
 </div>
     </div>
 
-   <!-- portfolio -->
+   <!----------------- portfolio -------------------->
     <div id="portfolio">
 <div class="container">
   <h2 class="sub-title">My Work</h2>
@@ -220,91 +229,127 @@ I have a passion for exploring new knowledge and self-learning in the field of 3
     <div class="layer">
 <h3>Netflix Clone</h3>
 <p>I built a Netflix clone with React.js and the TMDB API, featuring a dark theme and easy navigation. The site may show safety warnings, but they often aren’t serious. Click "Details" for more info and proceed with caution.</p>
-<a href=" https://merihunh.github.io/Netflix-Clone-2024/"><i class="fa-solid fa-up-right-from-square"></i></a>
+<a href="https://merihunh.github.io/Netflix-Clone-2024/"><i class="fa-solid fa-up-right-from-square"></i></a>
+    </div>
+    </div>
 
-    </div>
-    </div>
     <div class="work"><img src="./image/amazon_clone.png" alt="">
-      
-  <h2>Coming Soon</h2>
-       <div class="layer">
-        
+    <h2>Coming Soon</h2>
+    <div id="timer"></div> 
+
+           <div class="layer">
     <h3>Amazon clone</h3>
 <p>Stay tuned for my Amazon clone project, built with React.js! Experience a seamless shopping journey with intuitive navigation and secure checkout. Exciting features are on the way!</p>
-<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
 </div>
 </div>
+
     <div class="work"><img src="./image/Garage_Management_System.png" alt="">
       <h2>Coming Soon</h2>
     <div class="layer">
     <h3>Garage Management System</h3>
-<p>Stay tuned for my Garage Management System! This web app streamlines operations with an intuitive dashboard, vehicle tracking, appointment scheduling, and inventory management, enhancing the overall user experience..</p>
-<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+<p>Stay tuned for my Garage Management System! This web app streamlines operations with an intuitive dashboard, vehicle tracking, appointment scheduling, and inventory management, enhancing the overall user experience.</p>
 </div>
 </div>
   </div>
-  <div><span  class="btn">see more</span>
-  
   </div>
   </div>
   </div>
-  <!-- contact -->
 
+  <!--------------- contact ------------------>
   <div id="contact">
     <div class="container">
 <div class="raw">
+  <!---------------- contact-left------------->
   <div class="contact-left">
     <h2 class="sub-title">Contact me
     </h2>
-    <p><i class="fa-solid fa-envelope"></i> merihunhankara5@gmail.com</p>
-    <p> <i class="fa-solid fa-phone"></i> (206) 302-8554</p>
-  
+<div class="email">
+<p ><i style="color: #ffffff;" class="fa-solid fa-envelope"></i> <span id="email"></span></p>
+</div>
   <div class="social-icons">
-    <a href=""><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://github.com/MerihunH"><i class="fa-brands fa-square-github"></i></i></a>
+    <a href="https://www.linkedin.com/in/merihun-harka-2a323a357/"><i class="fa-brands fa-linkedin"></i></a>
     <a href="HTTPS://www.youtube.com/@MerihunHankara"><i class="fa-brands fa-youtube"></i></a>
-    <a href=""><i class="fa-brands fa-tiktok"></i></a>
-    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+    <a href="HTTPS://www.youtube.com/channel/UC3nV-LP5VET0ERxTOU3gKKg"><i class="fa-brands fa-youtube"></i></a>
   </div>
-  <a href="./image/cv.pdf" download class="btn btn2">Download CV</a>
+  <a href="./documents/CV.pdf" download class="btn btn2">Download CV</a>
 </div>
-  <div class="contact-right">
-    <form >
-     <input type="text" name="Name" placeholder="Your Name" required>
-     <input type="email" name="Email" placeholder="Your Email" required>
-     <textarea name="message"  rows="5" placeholder="Your Message"></textarea>
-     <button type="submit" class="btn btn2">submit</button>
-    </form>
 
+<!--------------- contact-right --------------->
+  <div class="contact-right">
+    <h2 class="text-contact">Contact Form for Hiring Managers</h2>
+    <form name="submit-to-google-sheet" >
+      <div class="contact-right-blocks-block-smallscreen">
+<div class="contact-group" >
+      <div class="contact-right-blocks-flex">
+         <label class="label" >Full Name</label>
+   <input  type="text"  name="Name" placeholder="Enter your full name" required>
+</div>
+
+   <div class="contact-right-blocks-flex">
+     <label class="label" >Email</label>
+  <input type="email" name="Email" placeholder="Enter your email address" required>
+</div>
+</div>
+<div class="contact-group" >
+      <div class="contact-right-blocks-flex">
+         <label class="label" for="name">Subject</label>
+   <input type="text" name="Subject" placeholder="subject" required>
+  </div>
+
+   <div class="contact-right-blocks-flex">
+     <label class="label" for="name">Portfolio</label>
+  <input type="url"  name="Portfolio" placeholder="Portfolio Link (optional)" >
+</div>
+</div>
+</div>
+     <div class="contact-right-blocks">
+</div>
+
+
+  <div>
+    <label for="">Contact Method</label>
+     <select name="Contact_method"  id="contact_method"  onchange="togglePhoneInput()"  required>
+    
+          <option value="">choose</option>
+    <option value="email">Email</option>
+    <option value="phone">Phone</option>
+  </select>
+  
   </div>
   
+  <div>
+     
+<input type="tel" name="Phone"  id="phone_container"  style="display: none" placeholder="Valid phone (e.g., +1234567890)"  pattern="[0-9+\- ]{7,15}"  >
+     </div>
+     <label for="">Available Day</label>
+  <div class="">
+<select id="available_day" name="Available_day" required>
+    <option value="">choose</option>
+    <option value="Monday">Monday</option>
+    <option value="Tuesday">Tuesday</option>
+    <option value="Wednesday">Wednesday</option>
+    <option value="Thursday">Thursday</option>
+    <option value="Friday">Friday</option>
+    <option value="Saturday">Saturday</option>
+    <option value="Sunday">Sunday</option>
+</select>
+
+<label for=""> Available Time</label>
+<div class="">
+<input type="time"  name="Available_time" class="" required>
 </div>
-
-    </div>
-    <div class="copyright"><p> <i class="fa-solid fa-copyright"></i>2025 Merihun Harka. All rights reserved.</p></div>
+<label for="">Message</label>
+     <textarea name="Message"  rows="5" placeholder="Enter your message here..."></textarea>
+   <button type="submit" class="btn btn2">Submit</button> <span id="msgsuccess"></span>
+    </form>
   </div>
-<script>
-var tablinks = document.getElementsByClassName("tab-links");
-
-var tabcontents = document.getElementsByClassName("tab-contents");
-
-function opentab(tabname)
-{
-
-  for(tablink of tablinks)
-{
-  tablink.classList.remove("active-link")
-}
-
- for(tabcontent of tabcontents)
-{
-  tabcontent.classList.remove("active-tab")
-}
-event.currentTarget.classList.add("active-link")
-  document.getElementById(tabname).classList.add("active-tab");
-
-}
-
-</script>
-
+</div>
+    </div>
+    </div>
+    
+    <div class="copyright"><p>Copyright <i class="fa-solid fa-copyright"></i> 2025 <span> Merihun Harka</span> All rights reserved.</p></div>
+    <script src="https://kit.fontawesome.com/3dcd71a794.js" crossorigin="anonymous"></script>
+  <script src="./javascript/javascript.js"></script>
   </body>
 </html>
